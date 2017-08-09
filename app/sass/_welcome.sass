@@ -20,7 +20,7 @@
         text-align: center
         width: 50%
         img
-            width: 95%
+            width: 32rem
 
         &:after
             content: 'GoldCoach представляет...'
@@ -38,7 +38,7 @@
         @include font(3rem, 4, $color-orange, uppercase)
 
     &__about
-        @include font(2.8rem, 1.3)
+        @include font(2.8rem, 1.3, $color-default, none, center, bold)
 
     &__button
         margin-top: 3.5rem
@@ -47,7 +47,7 @@
         border: 0
         border-bottom: .5rem solid transparent
         border-bottom: .5rem solid $color-dark-orange
-        @include font(3rem, 1, white)
+        @include font(3rem, 1, white, center, none, bold)
 
     &__middle
         display: flex
@@ -114,7 +114,7 @@
             opacity: .8
 
         &-name
-            @include font(2.5rem, 1.2, $color-white, uppercase, center)
+            @include font(2.5rem, 1.2, $color-white, uppercase, center, bold)
     &__persone-about
         margin-top: 3rem
 
@@ -125,7 +125,7 @@
 
             li 
                 position: relative
-                @include font(1.8rem, 1.1, $color-white, normal, left)
+                @include font(1.8rem, 1.1, $color-white, none, left)
                 padding: 1.5rem 0
 
                 &:before
@@ -146,7 +146,7 @@
         justify-content: center
         width: 50%
         background: $color-grey
-        @include font(2.4rem, 1.3, $color-default, normal, left)
+        @include font(2.4rem, 1.3, $color-default, none, left)
         padding: 3rem 0 6rem 0
 
     &__count
@@ -238,7 +238,7 @@
         margin: 4rem 0
 
     &__bottom-side-button
-         @include font(2.8rem, 1.3, $color-white, normal, bold)
+         @include font(2.8rem, 1.3, $color-white, none, center, bold)
          background: $color-orange
          padding: 1.5rem 4.5rem
 
@@ -249,12 +249,12 @@
     &__history
 
         &-header
-             @include font(3.6rem, 1.3, $color-default, normal, center, bold)
+             @include font(3.6rem, 1.3, $color-default, none, center, bold)
              padding-top: 6.5rem
              padding-bottom: 2rem
 
         p 
-             @include font(3rem, 1.3, $color-default, normal, left)
+             @include font(3rem, 1.3, $color-default, none, left)
              padding: 2rem 0
 
     &__collage
@@ -266,14 +266,14 @@
     &__footer
 
         p 
-            @include font(3.5rem, 1.3, $color-default, normal, left, bold)
+            @include font(3.5rem, 1.3, $color-default, none, left)
 
         h2 
-            @include font(3rem, 1.3, $color-default, normal, left, normal)
+            @include font(3rem, 1.3, $color-default, none, left, bold)
             margin: 6rem 0 9rem 0
 
         &-button
-            @include font(4.8rem, 1.8, $color-white, normal, center, bold)
+            @include font(4.8rem, 1.8, $color-white, none, center, bold)
             background: $color-orange
             border-bottom: .5rem solid $color-dark-orange
             width: 100%
