@@ -3093,6 +3093,18 @@ button {
       width: 100%; }
       .welcome__img img {
         width: 28rem; }
+    .welcome__logo {
+      position: relative;
+      border-bottom: 0; }
+      .welcome__logo:after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        display: block;
+        width: -webkit-calc(100% + 7rem);
+        width: calc(100% + 7rem);
+        height: .3rem;
+        background: #93a2ab; }
     .welcome__left-side {
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
