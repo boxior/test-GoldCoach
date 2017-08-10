@@ -41,10 +41,14 @@
 		
 		&__container
 
+		&__background-history
+			position: relative
+			background: none
+
 		&__background-collage
 			padding: 1.5rem 0
-
-		&__background-history
+			background: url('../img/background-collage.png') no-repeat center center
+			background-size: cover
 
 		&__img
 			width: 100%
@@ -110,6 +114,7 @@
 							top: 2.023rem
 
 		&__history 
+			
 			p 
 				font-size: 2.4rem
 			&-header 
@@ -151,6 +156,37 @@
 
 	.left-triangle, .right-triangle
 		display: none
+
+	
+
+	.history 
+		&-left-triangle-top
+			display: block
+			position: absolute
+			width: 20%
+			top: 10%
+			left: 0
+
+		&-left-triangle-bottom
+			display: block
+			position: absolute
+			width: 20%
+			top: 30%
+			left: 0
+
+		&-right-triangle-top
+			display: block
+			position: absolute
+			width: 20%
+			top: 10%
+			right: 0
+
+		&-right-triangle-bottom
+			display: block
+			position: absolute
+			width: 20%
+			top: 30%
+			right: 0
 
 @media only screen and (min-width : 320px) and (max-width: 480px)
 	html 
