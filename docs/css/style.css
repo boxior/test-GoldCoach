@@ -2590,6 +2590,9 @@ button {
     cursor: pointer;
     color: #2b2e35; }
 
+.sc {
+  width: 100rem; }
+
 .welcome {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2617,9 +2620,9 @@ button {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100rem; }
+    width: 100%; }
   .welcome__logo {
-    width: 97%;
+    width: 90rem;
     padding: 3.5rem 0;
     display: -webkit-box;
     display: -webkit-flex;
@@ -3009,8 +3012,9 @@ button {
     text-transform: none;
     text-align: center;
     font-weight: bold;
-    padding-top: 6.5rem;
-    padding-bottom: 2rem; }
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+    margin: 0; }
   .welcome__history p {
     font-size: 3rem;
     line-height: 1.3;
@@ -3020,34 +3024,36 @@ button {
     font-weight: normal;
     padding: 2rem 0; }
   .welcome__collage {
-    width: 100%; }
+    z-index: 1; }
     .welcome__collage img {
       width: 100%; }
-  .welcome__footer p {
-    font-size: 3.5rem;
-    line-height: 1.3;
-    color: #000000;
-    text-transform: none;
-    text-align: left;
-    font-weight: normal; }
-  .welcome__footer h2 {
-    font-size: 3rem;
-    line-height: 1.3;
-    color: #000000;
-    text-transform: none;
-    text-align: left;
-    font-weight: bold;
-    margin: 6rem 0 9rem 0; }
-  .welcome__footer-button {
-    font-size: 4.8rem;
-    line-height: 1.8;
-    color: #ffffff;
-    text-transform: none;
-    text-align: center;
-    font-weight: bold;
-    background: #ff621f;
-    border-bottom: 0.5rem solid #ff332a;
-    width: 100%; }
+  .welcome__footer {
+    z-index: 1; }
+    .welcome__footer p {
+      font-size: 3.5rem;
+      line-height: 1.3;
+      color: #000000;
+      text-transform: none;
+      text-align: left;
+      font-weight: normal; }
+    .welcome__footer h2 {
+      font-size: 3rem;
+      line-height: 1.3;
+      color: #000000;
+      text-transform: none;
+      text-align: left;
+      font-weight: bold;
+      margin: 6rem 0 9rem 0; }
+    .welcome__footer-button {
+      font-size: 4.8rem;
+      line-height: 1.8;
+      color: #ffffff;
+      text-transform: none;
+      text-align: center;
+      font-weight: bold;
+      background: #ff621f;
+      border-bottom: 0.5rem solid #ff332a;
+      width: 100%; }
   .welcome__social {
     margin: 4.5rem 0;
     text-align: center; }
@@ -3059,6 +3065,44 @@ button {
       margin-left: .5rem; }
       .welcome__social a:first-child {
         margin-left: 0; }
+  .welcome__background-history, .welcome__background-collage {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background: url("../img/background-history.png") no-repeat center center;
+    -webkit-background-size: cover;
+            background-size: cover; }
+  .welcome__background-collage {
+    position: relative;
+    background: url("../img/background-collage.png") no-repeat center center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    padding: 3rem 0; }
+    .welcome__background-collage .left-triangle {
+      width: 20%;
+      position: absolute;
+      left: 0;
+      bottom: -35%; }
+    .welcome__background-collage .right-triangle {
+      width: 30%;
+      position: absolute;
+      right: 0;
+      bottom: -50%; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -3086,90 +3130,95 @@ button {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   html {
-    font-size: .695rem; }
-  .welcome {
-    padding: 0 3.5rem; }
-    .welcome__img {
-      width: 100%; }
-      .welcome__img img {
-        width: 28rem; }
-    .welcome__logo {
-      position: relative;
-      border-bottom: 0; }
-      .welcome__logo:after {
-        position: absolute;
-        bottom: 0;
-        content: '';
-        display: block;
-        width: -webkit-calc(100% + 7rem);
-        width: calc(100% + 7rem);
-        height: .3rem;
-        background: #93a2ab; }
-    .welcome__left-side {
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2;
-      width: 100%; }
-    .welcome__bottom-side {
-      -webkit-box-ordinal-group: 4;
-      -webkit-order: 3;
-          -ms-flex-order: 3;
-              order: 3; }
-      .welcome__bottom-side-header {
-        font-size: 3.2rem; }
-        .welcome__bottom-side-header br {
-          display: none; }
-      .welcome__bottom-side-button {
-        font-size: 3.5rem; }
-      .welcome__bottom-side-about {
-        font-size: 3.5rem; }
-    .welcome__month {
-      font-size: 2.473rem; }
-    .welcome__day {
-      font-size: 8.257rem; }
-    .welcome__date-all {
-      font-size: 3rem; }
-    .welcome__persone img {
-      width: 22.8rem; }
-    .welcome__persone-status {
-      font-size: 2.473rem; }
-    .welcome__persone-about ul li {
-      font-size: 2.023rem; }
-      .welcome__persone-about ul li:before {
-        top: 2.023rem; }
-    .welcome__history p {
-      font-size: 2.4rem; }
-    .welcome__history-header {
-      font-size: 2.4rem; }
-    .welcome__time {
-      font-size: 2.698rem; }
-    .welcome__right-side {
-      -webkit-box-ordinal-group: 2;
-      -webkit-order: 1;
-          -ms-flex-order: 1;
-              order: 1;
-      width: 100%; }
-    .welcome__count-header {
-      font-size: 2.4rem; }
-    .welcome__counter-after:after {
-      font-size: 1.571rem; }
-    .welcome__programm-h {
-      font-size: 2.693rem; }
-    .welcome__footer p {
-      font-size: 2.5rem;
-      margin-top: 4rem; }
-    .welcome__footer h2 {
-      font-size: 2.5rem;
-      margin: 4rem 0 7rem 0; }
-    .welcome__footer-button {
-      font-size: 2.703rem; }
-    .welcome__social {
-      margin: 5rem 0 9rem 0; } }
+    font-size: 10px; }
+  .sc {
+    width: -webkit-calc(100% - 7rem);
+    width: calc(100% - 7rem); }
+  .welcome__background-collage {
+    padding: 1.5rem 0; }
+  .welcome__img {
+    width: 100%; }
+    .welcome__img img {
+      width: 28rem; }
+  .welcome__logo {
+    position: relative;
+    border-bottom: 0; }
+    .welcome__logo:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: -webkit-calc(100% + 7rem);
+      width: calc(100% + 7rem);
+      height: .3rem;
+      background: #93a2ab; }
+  .welcome__left-side {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%; }
+  .welcome__bottom-side {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3; }
+    .welcome__bottom-side-header {
+      font-size: 3.2rem; }
+      .welcome__bottom-side-header br {
+        display: none; }
+    .welcome__bottom-side-button {
+      font-size: 3.5rem; }
+    .welcome__bottom-side-about {
+      font-size: 3.5rem; }
+  .welcome__month {
+    font-size: 2.473rem; }
+  .welcome__day {
+    font-size: 8.257rem; }
+  .welcome__date-all {
+    font-size: 3rem; }
+  .welcome__persone img {
+    width: 22.8rem; }
+  .welcome__persone-status {
+    font-size: 2.473rem; }
+  .welcome__persone-about ul li {
+    font-size: 2.023rem; }
+    .welcome__persone-about ul li:before {
+      top: 2.023rem; }
+  .welcome__history p {
+    font-size: 2.4rem; }
+  .welcome__history-header {
+    font-size: 2.4rem; }
+  .welcome__time {
+    font-size: 2.698rem; }
+  .welcome__right-side {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%; }
+  .welcome__count-header {
+    font-size: 2.4rem; }
+  .welcome__counter-after:after {
+    font-size: 1.571rem; }
+  .welcome__programm-h {
+    font-size: 2.693rem; }
+  .welcome__footer p {
+    font-size: 2.5rem;
+    margin-top: 4rem; }
+  .welcome__footer h2 {
+    font-size: 2.5rem;
+    margin: 4rem 0 7rem 0; }
+  .welcome__footer-button {
+    font-size: 2.703rem; }
+  .welcome__social {
+    margin: 5rem 0 9rem 0; }
+  .left-triangle, .right-triangle {
+    display: none; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html {
-    font-size: .48rem; }
+    font-size: 8px; }
   .welcome__img img {
     width: 80%; } }
 

@@ -32,12 +32,19 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) and (max-width: 768px)
 	html 
-		font-size: .695rem
+		font-size: 10px
+
+	.sc
+		width: calc(100% - 7rem)
 
 	.welcome
-		padding: 0 3.5rem
-
+		
 		&__container
+
+		&__background-collage
+			padding: 1.5rem 0
+
+		&__background-history
 
 		&__img
 			width: 100%
@@ -56,7 +63,6 @@
 				width: calc(100% + 7rem)
 				height: .3rem
 				background: #93a2ab
-
 
 		&__left-side 
 			order: 2
@@ -143,9 +149,12 @@
 		&__social 
 			margin: 5rem 0 9rem 0
 
+	.left-triangle, .right-triangle
+		display: none
+
 @media only screen and (min-width : 320px) and (max-width: 480px)
 	html 
-		font-size: .48rem
+		font-size: 8px
 
 	.welcome__img 
 		img 
