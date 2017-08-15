@@ -24,6 +24,7 @@
         text-align: center
         width: 50%
         img
+            margin-left: -400%
             width: 32rem
 
         &:after
@@ -39,8 +40,26 @@
         align-items: center
         padding: 0 0 3.5rem 0
     &__header
-        @include font(3rem, 4, $color-orange, uppercase)
-
+        height: 12rem
+        p
+            @include font(3rem, 4, $color-orange, uppercase)
+            opacity: 0
+            animation: in 3s ease-out forwards
+            animation-delay: 1s
+            @keyframes in
+                0%
+                    letter-spacing: -17px
+                    opacity: 0
+                
+                30%
+                    letter-spacing: .4rem
+                    opacity: 1
+                
+                100%
+                    letter-spacing: .1rem
+                    opacity: 1
+            
+            
     &__about
         @include font(2.8rem, 1.3, $color-default, none, center, bold)
 
@@ -52,6 +71,18 @@
         border-bottom: .5rem solid transparent
         border-bottom: .5rem solid $color-dark-orange
         @include font(3rem, 1, white, center, none, bold)
+        color: $color-orange
+        animation: btn 3s ease-out forwards
+        animation-delay: 1s
+        @keyframes btn
+            0%
+                color: $color-orange
+            
+            30%
+                color: $color-dark-orange
+            
+            100%
+                color: white
 
     &__middle
         display: flex
@@ -191,6 +222,8 @@
             &:nth-child(4)
                 &:after
                     content: 'секунд'
+            p 
+                line-height: 1
 
     &__counter-after
         &:after
@@ -242,9 +275,9 @@
         margin: 4rem 0
 
     &__bottom-side-button
-         @include font(2.8rem, 1.3, $color-white, none, center, bold)
-         background: $color-orange
-         padding: 1.5rem 4.5rem
+        @include font(2.8rem, 1.3, $color-white, none, center, bold)
+        background: $color-orange
+        padding: 1.5rem 4.5rem
 
     &__bottom-side-about
          @include font(3rem, 1.3)
